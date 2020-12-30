@@ -1,0 +1,26 @@
+$topOnHeader: 10px;
+
+.nav-header {
+  background-color: #eff600;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+}
+.nav-logo {
+  text-align: center;
+  position: relative;
+  top: $topOnHeader;
+  margin-right: 20px;
+}
+.nav-search-input {
+  position: relative;
+  top: $topOnHeader;
+  width: 600px;
+  height: 19px;
+  max-width: 600px;
+  margin-right: 80px;
+  border: 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 7px 15px 9px 15px;
+  outline: none;
+}
