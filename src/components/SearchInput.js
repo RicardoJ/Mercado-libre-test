@@ -1,21 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import searchIcon from '../assets/images/ic_Search.png';
 
-const SearchInput = () => {
+const SearchInput = ({onChange , value}) => {
   return (
-    <form className='nav-search'>
+    <>
       <input
         className='nav-search__input'
         autoFocus
-        maxlLength='120'
+        onChange={onChange}
+        value={value}
+        maxLength='120'
         type='text'
         placeholder='Nunca dejes de buscar'
       />
       <button className='nav-search__btn' type='submit'>
         <img src={searchIcon} alt='search' />
       </button>
-    </form>
+    </>
   );
 };
-
+SearchInput.propTypes = {
+    onChange: PropTypes.func,
+    value: PropTypes.string,
+  };
+  
 export default SearchInput;
