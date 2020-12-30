@@ -1,4 +1,11 @@
 .App {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   min-height: 100vh;
+}
+.App-container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 800px;
+  text-align: center;
+  padding: 26px 0;
 }
