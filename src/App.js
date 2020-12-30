@@ -1,8 +1,12 @@
+import React from 'react';
+import Header from './pages/header/Header';
+import './App.scss';
+
 function App() {
  
   return (
-    <div >
-     ML
+    <div className='App'>
+      <Header/>
     </div>
   );
 }
