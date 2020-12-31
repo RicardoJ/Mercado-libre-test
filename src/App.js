@@ -4,6 +4,8 @@ import Header from './pages/header/Header';
 import './App.scss';
 import Home from './pages/home/Home';
 import PageNotFound from './pages/pageNotFound/PageNotFound';
+import SearchResult from './pages/searchResult/SearchResult';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
         <Router>
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route exact path='/search' component={SearchResult} />
             <Route component={PageNotFound} />
           </Switch>
         </Router>
