@@ -3,9 +3,11 @@
   min-height: 100vh;
 }
 .App-container {
-  margin-right: auto;
-  margin-left: auto;
+  margin: 30px auto 0 auto;
   width: 800px;
+  height: 500px;
+  max-height: 500px;
   text-align: center;
   padding: 26px 0;
+  background-color: white;
 }

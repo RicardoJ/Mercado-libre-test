@@ -18,8 +18,8 @@ $topOnHeader: 10px;
   &__input {
     position: relative;
     top: $topOnHeader;
-    width: 600px;
-    max-width: 600px;
+    width: 665px;
+    max-width: 800px;
     border: 0 rgba(0, 0, 0, 0.2);
     border-radius: 4px 0 0 4px;
     padding: 9px 15px 9px 15px;
@@ -28,7 +28,7 @@ $topOnHeader: 10px;
 
   &__btn {
     position: relative;
-    margin-right: 80px;
+    margin-right: 12px;
     top: $topOnHeader;
     background-color: #eeeeee;
     outline: none;
