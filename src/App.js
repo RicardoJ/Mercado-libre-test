@@ -10,7 +10,7 @@ import SearchResult from './pages/searchResult/SearchResult';
 function App() {
   return (
     <div className='App'>
-      <Header />
+      <Header>
       <div className='App-container'>
         <Router>
           <Switch>
@@ -19,7 +19,7 @@ function App() {
             <Route component={PageNotFound} />
           </Switch>
         </Router>
-      </div>
+      </div></Header>
     </div>
   );
 }
