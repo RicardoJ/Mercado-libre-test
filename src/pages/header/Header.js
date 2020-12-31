@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles.scss';
 import logoMercadoLibre from '../../assets/images/Logo_ML.png';
 import SearchInput from '../../components/SearchInput';
+import ProductService from '../../services/ProductService';
 
 const Header = () => {
   const [product, setProduct] = useState('');
@@ -12,7 +13,7 @@ const Header = () => {
 
   const searchProduct = e => {
     e.preventDefault();
-    console.log('ENVIAR ', product);
+    ProductService.getProductsByQuery(product);
   };
   return (
     <header className='nav-header'>
