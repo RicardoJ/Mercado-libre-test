@@ -11,7 +11,7 @@ const ProductService = {
         q: product,
       },
     });
-    console.log(response);
+    return response.data.results;
   },
 };
 

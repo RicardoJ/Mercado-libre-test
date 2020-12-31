@@ -13,7 +13,11 @@ const Header = () => {
 
   const searchProduct = e => {
     e.preventDefault();
-    ProductService.getProductsByQuery(product);
+    ProductService.getProductsByQuery(product).then(products => {
+      products.map((product, index) => {
+        if (index < 4) console.log(product);
+      });
+    });
   };
   return (
     <header className='nav-header'>
@@ -21,7 +25,7 @@ const Header = () => {
         <img src={logoMercadoLibre} alt='logo mercado libre' />
       </a>
       <form className='nav-search' onSubmit={searchProduct}>
-        <SearchInput value={product} onChange={getSearch}/>
+        <SearchInput value={product} onChange={getSearch} />
       </form>
     </header>
   );
