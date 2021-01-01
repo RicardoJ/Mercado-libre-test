@@ -8,7 +8,16 @@ const SearchResultList = () => {
   const filteredProducts = products.filter(
     (_, index) => index < TOTAL_LISTED_PRODUCTS,
   );
+  /* 
+ !!hacer seccion de navegacion arriba de la lista 
 
+en los href hacer links a la seccion de 
+   detalle del producto por medio de /:id
+
+crear consumo de api para obtener un producto por id
+
+   desarrollar vista de detalles
+*/
   return (
     <>
       {filteredProducts.map(product => (
@@ -29,7 +38,9 @@ const SearchResultList = () => {
               <a href='#' className='ui-search-link'>
                 ${product.price}
               </a>
-              <img src={shipping} alt='shipping' />
+              {product.shipping.free_shipping && (
+                <img src={shipping} alt='shipping' />
+              )}
             </div>
             <div className='ui-search-item__group--title'>
               <a href='#'>{product.title}</a>
