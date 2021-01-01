@@ -1,0 +1,78 @@
+$standard-padding: 32px;
+$font-weight-regular: 400;
+$color-text: #333333;
+$color-btn: #3483fa;
+$small-letter: 14px;
+
+.ui-detail-container {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: $standard-padding;
+  min-height: 450px;
+
+  &__colleft {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__colright {
+    width: 30%;
+    text-align: start;
+  }
+}
+.ui-figure{
+    margin: 0;
+}
+.ui-detail-description {
+  &__title {
+    text-align: start;
+    color: $color-text;
+    font-size: 28px;
+    font-weight: $font-weight-regular;
+  }
+  &__content {
+    padding-top: $standard-padding;
+    text-align: justify;
+    font-size: 16px;
+    color: #999999;
+  }
+}
+.ui-subtitle {
+  font-size: $small-letter;
+  font-weight: $font-weight-regular;
+  color: $color-text;
+  margin-bottom: 16px;
+}
+.ui-title {
+  font-size: 24px;
+  color: $color-text;
+  font-weight: 500;
+}
+.ui-price {
+  font-size: 46px;
+  padding: $standard-padding 0;
+}
+.ui-actions {
+  &__container {
+    width: 100%;
+  }
+}
+.ui-button {
+  background-color: $color-btn;
+  color: #eeeeee;
+  font-size: $small-letter;
+  line-height: 28px;
+  padding: 0 24px;
+  height: 28px;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2968c8;
+    color: #fff;
+  }
+}
