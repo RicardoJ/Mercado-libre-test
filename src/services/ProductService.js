@@ -1,8 +1,5 @@
-import API from './config';
-
-const PRODUCT_ENDPOINTS = {
-  LIST_PRODUCT: '/sites/MLA/search',
-};
+import { PRODUCT_ENDPOINTS } from '../constants';
+import API from './api';
 
 const ProductService = {
   getProductsByQuery: async product => {
