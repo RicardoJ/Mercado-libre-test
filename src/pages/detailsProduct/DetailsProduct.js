@@ -4,10 +4,9 @@ import './styles.scss';
 import DetailDescription from './DetailDescription';
 import Summary from './Summary';
 import ProductService from '../../services/ProductService';
-import { ProductContext } from '../../Context';
 
 const DetailsProduct = () => {
-  const [detailProduct, setDetailProduct] = useState('');
+  const [productDetail, setDetailProduct] = useState('');
   const [description, setDescription] = useState('');
   let { id } = useParams();
 
@@ -21,17 +20,13 @@ const DetailsProduct = () => {
   }, []);
 
   return (
-    <ProductContext.Provider
-      value={{
-        detailProduct: detailProduct,
-        description: description.plain_text,
-      }}
-    >
-      <section className='ui-detail-container'>
-        <DetailDescription />
-        <Summary />
-      </section>
-    </ProductContext.Provider>
+    <section className='ui-detail-container'>
+      <DetailDescription
+        productDetail={productDetail}
+        description={description.plain_text}
+      />
+      <Summary productDetail={productDetail} />
+    </section>
   );
 };
 

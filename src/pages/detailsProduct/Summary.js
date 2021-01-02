@@ -1,16 +1,14 @@
-import React, { useContext } from 'react';
-import { ProductContext } from '../../Context';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Summary = () => {
-  const {detailProduct }= useContext(ProductContext);
-
+const Summary = ({ productDetail }) => {
   return (
     <div className='ui-detail-container__colright'>
       <div className='ui-subtitle'>
-        {`${detailProduct.condition} - ${detailProduct.sold_quantity} vendidos`}
+        {`${productDetail.condition} - ${productDetail.sold_quantity} vendidos`}
       </div>
-      <div className='ui-title'>{detailProduct.title}</div>
-      <div className='ui-price'>$ {detailProduct.price} </div>
+      <div className='ui-title'>{productDetail.title}</div>
+      <div className='ui-price'>$ {productDetail.price} </div>
       <form>
         <div className='ui-actions__container'>
           <button className='ui-button'>Comprar</button>
@@ -18,6 +16,10 @@ const Summary = () => {
       </form>
     </div>
   );
+};
+
+Summary.propTypes = {
+  productDetail: PropTypes.object,
 };
 
 export default Summary;
