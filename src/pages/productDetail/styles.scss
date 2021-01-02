@@ -8,7 +8,7 @@ $max-width: max-content;
 .ui-detail-container {
   display: flex;
   flex-flow: row nowrap;
-  padding: $standard-padding;
+  padding: 16px $standard-padding $standard-padding;
   min-height: 450px;
 
   &__colleft {

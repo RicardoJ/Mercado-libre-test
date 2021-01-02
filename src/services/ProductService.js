@@ -1,6 +1,14 @@
 import { PRODUCT_ENDPOINTS } from '../constants';
 import API from './api';
 
+/**
+ *  @description consume API.
+ *  @constant
+ *  @type {string} [PRODUCT_ENDPOINTS.LIST_PRODUCT].
+ *  @type {string} [PRODUCT_ENDPOINTS.PROUDCT_BY_ID].
+ *  @default
+ */
+
 const ProductService = {
   getProductsByQuery: async product => {
     const response = await API.get(PRODUCT_ENDPOINTS.LIST_PRODUCT, {

@@ -7,12 +7,21 @@ import ProductService from '../../services/ProductService';
 import { ProductContext } from '../../Context';
 import { Link, useHistory } from 'react-router-dom';
 import { PATH_SEARCH_RESULT } from '../../constants';
-
+import { getSearchList } from '../../services/storage';
+/**
+ * @description header in application.
+ * @param {Object} children - children components.
+ *
+ * @constant
+ * @type {string} [PATH_SEARCH_RESULT].
+ * @default
+ */
 const Header = ({ children }) => {
   const [product, setProduct] = useState('');
-  const [productList, setProductList] = useState([]);
+  const [productList, setProductList] = useState(getSearchList() || []);
   const history = useHistory();
 
+  /** search products by name and redirects the view of search result.  */
   const searchProduct = e => {
     e.preventDefault();
     ProductService.getProductsByQuery(product).then(products => {
@@ -27,11 +36,11 @@ const Header = ({ children }) => {
   return (
     <ProductContext.Provider value={productList}>
       <header className='nav-header'>
-        <a className='nav-logo'>
+        <div className='nav-logo'>
           <Link to='/'>
             <img src={logoMercadoLibre} alt='logo mercado libre' />
           </Link>
-        </a>
+        </div>
         <form className='nav-search' onSubmit={searchProduct}>
           <SearchInput
             value={product}

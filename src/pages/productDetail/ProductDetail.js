@@ -4,10 +4,14 @@ import './styles.scss';
 import DescriptionDetail from './DescriptionDetail';
 import Summary from './Summary';
 import ProductService from '../../services/ProductService';
-
+/**
+ * @description Page product detail.
+ * @returns product details, image, description, name, price, sold quantity.
+ */
 const ProductDetail = () => {
-  const [productDetail, setProductDetail] = useState([]);
+  const [productDetail, setProductDetail] = useState({});
   const [description, setDescription] = useState('');
+  /** get ID from the browser url.  */
   let { id } = useParams();
 
   useEffect(() => {
