@@ -63,3 +63,17 @@ a {
   color: #333333;
   margin-right: 32px;
 }
+.ui-rescue {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+}
+.ui-rescue-list {
+  text-align: initial;
+  margin-left: 30px;
+}
+.ui-rescue-item {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-bottom: 3px;
+}
