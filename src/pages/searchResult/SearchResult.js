@@ -1,12 +1,12 @@
 import React from 'react';
-import SearchResultList from '../../components/SearchResultList';
+import SearchList from '../../components/searchList/SearchList';
 import './styles.scss';
 
 const SearchResult = () => (
   <>
     <section className='ui-search-result'>
       <ol className='ui-search-layout'>
-        <SearchResultList />
+        <SearchList />
       </ol>
     </section>
   </>
