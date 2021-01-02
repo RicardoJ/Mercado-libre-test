@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import shipping from '../assets/images/ic_shipping.png';
 import { ProductContext } from '../Context';
 import { TOTAL_LISTED_PRODUCTS } from '../constants';
@@ -14,7 +15,10 @@ const SearchResultList = () => {
       {filteredProducts.map(product => (
         <li key={product.id} className='ui-search-layout__item'>
           <div className='ui-search-result__image'>
-            <a href='#' title='titulo get endpoint'>
+            <Link
+              to={{ pathname: `/items/${product.id}` }}
+              title={product.title}
+            >
               <img
                 className='ui-search-result-image__element'
                 width='180'
@@ -22,17 +26,22 @@ const SearchResultList = () => {
                 src={product.thumbnail}
                 alt='logo mercado libre'
               />
-            </a>
+            </Link>
           </div>
           <div className='ui-search-result__content'>
             <div className='ui-search-item__group'>
-              <a href='#' className='ui-search-link'>
-                ${product.price}
-              </a>
-              <img src={shipping} alt='shipping' />
+              <span className='ui-search-link'>${product.price}</span>
+              {product.shipping.free_shipping && (
+                <img src={shipping} alt='shipping' />
+              )}
             </div>
             <div className='ui-search-item__group--title'>
-              <a href='#'>{product.title}</a>
+              <Link
+                to={{ pathname: `/items/${product.id}` }}
+                title={product.title}
+              >
+                {product.title}
+              </Link>
             </div>
           </div>
           <div className='ui-search-result__location'>

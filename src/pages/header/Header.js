@@ -13,7 +13,6 @@ const Header = ({ children }) => {
   const [productList, setProductList] = useState([]);
   const history = useHistory();
 
-
   const searchProduct = e => {
     e.preventDefault();
     ProductService.getProductsByQuery(product).then(products => {

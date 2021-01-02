@@ -10,6 +10,18 @@ const ProductService = {
     });
     return response.data.results;
   },
+  getProductByID: async idProduct => {
+    const response = await API.get(
+      `${PRODUCT_ENDPOINTS.PROUDCT_BY_ID}${idProduct}`,
+    );
+    return response.data;
+  },
+  getProductDescription: async idProduct => {
+    const response = await API.get(
+      `${PRODUCT_ENDPOINTS.PROUDCT_BY_ID}${idProduct}/description`,
+    );
+    return response.data;
+  },
 };
 
 export default ProductService;
