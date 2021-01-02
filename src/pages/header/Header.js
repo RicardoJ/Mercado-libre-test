@@ -11,7 +11,7 @@ import { getSearchState } from '../../services/storage';
 
 const Header = ({ children }) => {
   const [product, setProduct] = useState('');
-  const [productList, setProductList] = useState(getSearchState());
+  const [productList, setProductList] = useState(getSearchState() || []);
   const history = useHistory();
 
   const searchProduct = e => {
