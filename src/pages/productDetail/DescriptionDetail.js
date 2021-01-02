@@ -1,8 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+/**
+ * @description product detail, image and description text.
+ * @param {Object} productDetail - all product details.
+ * @param {array}  productDetail.pictures - product images.
+ * @param {string} productDetail.id - ID of the product.
+ * @param {string} description - product description.
+ */
 const DescriptionDetail = ({ productDetail, description }) => {
- 
   return (
     <div className='ui-detail-container__colleft'>
       <figure className='ui-figure'>
@@ -24,7 +29,7 @@ const DescriptionDetail = ({ productDetail, description }) => {
 
 DescriptionDetail.propTypes = {
   productDetail: PropTypes.object,
-  description: PropTypes.object,
+  description: PropTypes.string,
 };
 
 export default DescriptionDetail;

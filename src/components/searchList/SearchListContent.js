@@ -2,8 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import shipping from '../../assets/images/ic_shipping.png';
-
+/**
+ * @description return content of the product in the search list.
+ * @param {Object} product product from search list.
+ * @param {Number} product.price - price of the product.
+ * @param {Boolean} product.shipping.free_shipping - has free shipping or not.
+ * @param {string} product.id - ID of the product.
+ * @param {string} product.title - The name of the product.
+ * @param {string} product.address.state_name - The address of the product.
+ */
 const SearchListContent = ({ product }) => {
+
   return (
     <>
       <div className='ui-search-result__content'>

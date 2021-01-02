@@ -8,3 +8,9 @@ export const PRODUCT_ENDPOINTS = {
   PROUDCT_BY_ID: '/items/'
 };
 export const NEVER_STOP_LOOKING = 'Nunca dejes de buscar';
+export const NO_MATCHING_PUBLICATIONS = '🔍 No hay publicaciones que coincidan con tu búsqueda.';
+export const SEARCH_RESCUE =[
+ 'Revisa la ortografía de la palabra',
+ 'Utiliza palabras más genéricas o menos palabras.'
+];
+

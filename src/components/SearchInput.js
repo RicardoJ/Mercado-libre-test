@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import searchIcon from '../assets/images/ic_Search.png';
 import { NEVER_STOP_LOOKING } from '../constants';
-
+/**
+ * @description component to search for a product.
+ * @param {function} onChange function.
+ * @param {string} value - value in input.
+ */
 const SearchInput = ({onChange , value}) => {
   return (
     <>

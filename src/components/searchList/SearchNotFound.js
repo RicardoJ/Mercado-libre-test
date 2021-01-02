@@ -1,14 +1,23 @@
 import React from 'react';
+import { NO_MATCHING_PUBLICATIONS, SEARCH_RESCUE } from '../../constants';
 
+/**
+ * @description return search not found.
+ * @constant
+ * @type {string} [NO_MATCHING_PUBLICATIONS].
+ * @type {array} [SEARCH_RESCUE].
+ * @default
+ */
 const SearchNotFound = () => {
   return (
     <div className='ui-rescue'>
-      <h1>🔍 No hay publicaciones que coincidan con tu búsqueda.</h1>
+      <h1>{NO_MATCHING_PUBLICATIONS}</h1>
       <ul className='ui-rescue-list'>
-        <li className='ui-rescue-item'>Revisa la ortografía de la palabra.</li>
-        <li className='ui-rescue-item'>
-          Utiliza palabras más genéricas o menos palabras.
-        </li>
+        {SEARCH_RESCUE.map((item, index) => (
+          <li key={index} className='ui-rescue-item'>
+            {item}
+          </li>
+        ))}
       </ul>
     </div>
   );
