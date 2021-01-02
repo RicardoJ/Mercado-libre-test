@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DetailDescription = ({ productDetail, description }) => {
+const DescriptionDetail = ({ productDetail, description }) => {
  
  //console.log(productDetail.pictures[0].url);
   return (
@@ -23,9 +23,9 @@ const DetailDescription = ({ productDetail, description }) => {
   );
 };
 
-DetailDescription.propTypes = {
+DescriptionDetail.propTypes = {
   productDetail: PropTypes.object,
   description : PropTypes.object,
 };
 
-export default DetailDescription;
+export default DescriptionDetail;

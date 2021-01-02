@@ -59,6 +59,7 @@ $small-letter: 14px;
 .ui-price {
   font-size: 46px;
   padding: $standard-padding 0;
+  width: max-content;
 }
 .ui-actions {
   &__container {

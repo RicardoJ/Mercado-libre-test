@@ -5,7 +5,7 @@ import './App.scss';
 import Home from './pages/home/Home';
 import PageNotFound from './pages/pageNotFound/PageNotFound';
 import SearchResult from './pages/searchResult/SearchResult';
-import DetailsProduct from './pages/detailsProduct/DetailsProduct';
+import ProductDetail from './pages/productDetail/ProductDetail';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/items' component={SearchResult} />
-              <Route exact path='/items/:id' component={DetailsProduct} />
+              <Route exact path='/items/:id' component={ProductDetail} />
               <Route default component={PageNotFound} />
             </Switch>
           </div>

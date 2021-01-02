@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './styles.scss';
-import DetailDescription from './DetailDescription';
+import DescriptionDetail from './DescriptionDetail';
 import Summary from './Summary';
 import ProductService from '../../services/ProductService';
 
-const DetailsProduct = () => {
+const ProductDetail = () => {
   const [productDetail, setDetailProduct] = useState('');
   const [description, setDescription] = useState('');
   let { id } = useParams();
@@ -21,7 +21,7 @@ const DetailsProduct = () => {
 
   return (
     <section className='ui-detail-container'>
-      <DetailDescription
+      <DescriptionDetail
         productDetail={productDetail}
         description={description.plain_text}
       />
@@ -30,4 +30,4 @@ const DetailsProduct = () => {
   );
 };
 
-export default DetailsProduct;
+export default ProductDetail;
