@@ -8,7 +8,7 @@ const DetailDescription = () => {
     <div className='ui-detail-container__colleft'>
       <figure className='ui-figure'>
         <img
-          height='180'
+          className='ui-figure__image'
           src={detailProduct.thumbnail}
           alt='logo mercado libre'
         />
