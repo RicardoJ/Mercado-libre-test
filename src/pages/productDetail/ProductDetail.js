@@ -6,13 +6,13 @@ import Summary from './Summary';
 import ProductService from '../../services/ProductService';
 
 const ProductDetail = () => {
-  const [productDetail, setDetailProduct] = useState('');
+  const [productDetail, setProductDetail] = useState([]);
   const [description, setDescription] = useState('');
   let { id } = useParams();
 
   useEffect(() => {
-    ProductService.getProductByID(id).then(idProduct => {
-      setDetailProduct(idProduct);
+    ProductService.getProductByID(id).then(product => {
+      setProductDetail(product);
     });
     ProductService.getProductDescription(id).then(idProduct => {
       setDescription(idProduct);

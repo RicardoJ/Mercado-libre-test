@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 
 const DescriptionDetail = ({ productDetail, description }) => {
  
- //console.log(productDetail.pictures[0].url);
   return (
     <div className='ui-detail-container__colleft'>
       <figure className='ui-figure'>
         <img
           className='ui-figure__image'
-          src={productDetail.pictures}
+          src={productDetail.pictures && productDetail.pictures[0].url}
           alt={productDetail.title}
         />
       </figure>
@@ -25,7 +24,7 @@ const DescriptionDetail = ({ productDetail, description }) => {
 
 DescriptionDetail.propTypes = {
   productDetail: PropTypes.object,
-  description : PropTypes.object,
+  description: PropTypes.object,
 };
 
 export default DescriptionDetail;
