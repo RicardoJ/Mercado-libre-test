@@ -7,10 +7,11 @@ import ProductService from '../../services/ProductService';
 import { ProductContext } from '../../Context';
 import { Link, useHistory } from 'react-router-dom';
 import { PATH_SEARCH_RESULT } from '../../constants';
+import { getSearchState } from '../../services/storage';
 
 const Header = ({ children }) => {
   const [product, setProduct] = useState('');
-  const [productList, setProductList] = useState([]);
+  const [productList, setProductList] = useState(getSearchState());
   const history = useHistory();
 
   const searchProduct = e => {
@@ -23,6 +24,7 @@ const Header = ({ children }) => {
       search: `?search=${product}`,
     });
   };
+  console.log(getSearchState());
 
   return (
     <ProductContext.Provider value={productList}>
